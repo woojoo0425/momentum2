@@ -8,6 +8,10 @@ h1, h3 {
 .hidden {
     display: none;
 }
+input:focus,
+input:active {
+    outline: none;
+}
 .bg-area {
     position: absolute;
     z-index: -1;
@@ -17,18 +21,65 @@ h1, h3 {
     top: 0;
     bottom: 0;
 }
+.center {
+    padding-top: 5rem;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
 #weather-area {
     position: absolute;
-}
-#login-form {
-    position: absolute;
-}
-#hello-area {
-    position: absolute;
+    color: yellow;
+    font-weight: bold;
+    font-size: 5px;
+    right: 2rem;
+    top: 1rem;
 }
 #clock {
-    position: absolute;
+    color: yellow;
+    font-weight: bold;
+    font-size: 10rem;
+}
+#login-form {
+    font-size: 1rem;
+}
+#login-form input[type=text] {
+    background: none;
+    border: 0;
+    color: white;
+    border-bottom: 2px solid white;
+}
+#login-form input::placeholder {
+    color: white;
+}
+#login-form input[type=submit] {
+    background: none;
+    border: 0;
+    color:  white;
+    font-weight: bold;
+}
+#hello-area {
+    color: white;
+    padding-bottom: 2rem;
+}
+#todo-form input[type=text] {
+    background: none;
+    border: 0;
+    font-size: 25px;
+    color: white;
+}
+#todo-form input::placeholder {
+    color: white;
+    font-size: 25px;
+}
+#todo-list {
+    color: white;
 }
 #quote-area {
     position: absolute;
+    color: yellow;
+    font-size: 5px;
+    font-weight: bold;
+    left: 2rem;
+    top: 1rem;
 }

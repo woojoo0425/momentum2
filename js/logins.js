@@ -21,5 +21,6 @@ const savedLoginId = localStorage.getItem("loginId");
 if (savedLoginId == null) {
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
+    loginForm.classList.add(HIDDEN_CLASSNAME);
     paintHello(savedLoginId);
 }
