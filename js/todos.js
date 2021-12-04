@@ -9,12 +9,23 @@ function saveToDo() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
+function deleteToDo(event) {
+    const li = event.target.parentElement;
+    li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== li.id);
+    saveToDo;
+}
+
 function paintToDo(newToDoObj) {
     const li = document.createElement("li");
     li.id = newToDoObj.id;
     const span = document.createElement("span");
     span.innerText = newToDoObj.text;
+    const button = document.createElement("button");
+    button.innerText = "❌";
+    button.addEventListener("click", deleteToDo);
     li.appendChild(span);
+    li.appendChild(button);
     toDoList.appendChild(li);
 }
 
